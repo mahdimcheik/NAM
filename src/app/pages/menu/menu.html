@@ -2,6 +2,14 @@
   <h1>Menu</h1>
 </header>
 <main>
-  <div class="left-side"></div>
-  <div class="main-body"></div>
+  <div class="left-side">
+    @for (category of categories(); track category.id) {
+    <nam-category-card [category]="category"></nam-category-card>
+    }
+  </div>
+  <div class="main-body">
+    @for(dish of dishes(); track dish.id) {
+    <nam-dish-card [dish]="dish"></nam-dish-card>
+    }
+  </div>
 </main>

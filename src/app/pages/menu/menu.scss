@@ -12,14 +12,17 @@ main {
   flex-direction: row;
   height: calc(100vh - 75px);
   .left-side {
-    width: max(20%, 200px);
+    width: min(20%, 200px);
     background-color: lighten($primary-color, 40%);
-    padding: 1rem;
+    padding: 0.5rem;
     border-right: 1px solid $border-color;
   }
 
   .main-body {
     flex-grow: 1;
     padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
   }
 }

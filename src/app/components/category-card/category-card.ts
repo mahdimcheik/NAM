@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Category } from '../../models/category';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'nam-category-card',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './category-card.html',
   styleUrl: './category-card.scss',
 })
-export class CategoryCard {}
+export class CategoryCard {
+  category = input.required<Category>();
+}

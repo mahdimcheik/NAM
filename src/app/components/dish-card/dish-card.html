@@ -1,1 +1,6 @@
-<p>dishe-card works!</p>
+<div class="dish-card">
+  <img [src]="dish().imageUrl" alt="{{ dish().name }}" />
+  <h2>{{ dish().name }}</h2>
+  <!-- <p>{{ dish().description }}</p> -->
+  <p>{{ dish().price | currency : "EUR" }}</p>
+</div>
